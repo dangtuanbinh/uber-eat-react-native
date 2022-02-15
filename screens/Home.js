@@ -1,8 +1,9 @@
-import {SafeAreaView, StyleSheet, View} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import HeaderTabs from '../components/HeaderTabs';
 import SearchBar from '../components/SearchBar';
 import Categories from '../components/Categories';
+import RestaurantItem from '../components/RestaurantItem';
 
 const Home = () => {
   return (
@@ -12,6 +13,13 @@ const Home = () => {
         <SearchBar />
       </View>
       <Categories />
+      <View style={styles.restaurantContainer}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{flexGrow: 1}}>
+          <RestaurantItem />
+        </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
@@ -26,5 +34,8 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     backgroundColor: 'white',
     justifyContent: 'center',
+  },
+  restaurantContainer: {
+    height: 500,
   },
 });
