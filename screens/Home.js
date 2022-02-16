@@ -29,6 +29,7 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#eee',
+    flex: 1,
   },
   header: {
     paddingVertical: 10,
@@ -36,6 +37,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   restaurantContainer: {
-    height: 500,
+    flex: 1,
   },
 });
