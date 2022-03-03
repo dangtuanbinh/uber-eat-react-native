@@ -1,4 +1,11 @@
-import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 
 const items = [
@@ -37,10 +44,12 @@ const Categories = () => {
     <View style={styles.container}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {items.map((item, index) => (
-          <View key={index} style={styles.categoriesContainer}>
-            <Image style={styles.image} source={item.image} />
-            <Text style={styles.text}>{item.text}</Text>
-          </View>
+          <TouchableOpacity key={index} activeOpacity={0.5}>
+            <View style={styles.categoriesContainer}>
+              <Image style={styles.image} source={item.image} />
+              <Text style={styles.text}>{item.text}</Text>
+            </View>
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </View>
