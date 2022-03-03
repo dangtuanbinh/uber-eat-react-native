@@ -20,7 +20,6 @@ const App = () => {
           <Stack.Screen name="User" component={User} />
         </Stack.Navigator>
       </NavigationContainer>
-      {/* <Home /> */}
     </SafeAreaView>
   );
 };
