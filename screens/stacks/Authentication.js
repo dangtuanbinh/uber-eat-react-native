@@ -6,6 +6,7 @@ import LoginScreen from '../LoginScreen';
 import RegisterScreen from '../RegisterScreen';
 
 const Stack = createStackNavigator();
+
 const Authentication = () => {
   return (
     <View style={styles.container}>
